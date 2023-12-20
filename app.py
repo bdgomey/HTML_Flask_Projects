@@ -6,6 +6,10 @@ app = Flask(__name__)
 def index():
   return render_template('index.html')
 
+@app.route('/cats')
+def cats():
+  return render_template('cats.html')
+
 
 if __name__ == '__main__':
   app.run(debug=True)
