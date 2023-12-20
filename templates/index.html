@@ -11,7 +11,7 @@
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="{{ url_for('index') }}">SkillStorm</a>
+      <a class="navbar-brand" href="{{ url_for('index') }}">Animals</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -21,17 +21,17 @@
             <a class="nav-link active" aria-current="page" href="{{ url_for('cats') }}">Cats</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Canvas</a>
+            <a class="nav-link" href="#">Dogs</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Events
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Training Cats</a></li>
+              <li><a class="dropdown-item" href="#">Training Dogs</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">Why Dogs are Better than Cats</a></li>
             </ul>
           </li>
         </ul>
@@ -43,7 +43,23 @@
     </div>
   </nav>
 {% block content %}
-  <h1>This is my Base Doc</h1>
+
+<h1>This is a Website about Dogs and Cats</h1>
+<h2>Key differences between <span><em>cats</em></span> and <span><em>dogs</em></span></h2>
+
+<p>From care needs and cost to body language and behavior, there are plenty of differences between cats and dogs. While these characteristics can vary by the individual pet, here are the key takeaways:</p>
+
+<ul>
+  <li>Cats are independent, while dogs are more dependent.</li>
+  <li>Cats are lower-maintenance overall, while dogs require a different kind of care and attention.</li>
+  <li>Cats prefer solitary pursuits, while dogs provide more companionship and emotional bonding.</li>
+  <li>Cats typically live longer than dogs.</li>
+</ul>
+<p>If you’re still trying to decide between a cat and a dog, ask yourself: Does having a pint-sized enigma wrapped in fur as your companion sound like fun to you? Then cat parent it is. If a life filled with wagging tails, wet noses, and adventures with a boundless-joy-filled beast sounds more appealing, “team dog” might be more your style. Whether you’re a cat person, dog person, or both, one thing’s for sure — there will be no shortage of love and laughter in your life.</p>
+
+<p>At the end of the day, as much as we might want to put our companions into boxes based on characteristics like behavior, care, and personality, it’s not black and white — each one comes with their own unique set of qualities, and that’s what makes them so special.</p>
+
+
 {% endblock %}
 </body>
 </html>
