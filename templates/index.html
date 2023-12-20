@@ -7,8 +7,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <link rel="icon" type="image/png" href="https://skillstorm.com/wp-content/themes/custom-theme/images/favicon.svg">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
 </head>
-<body>
+<body class="homepage">
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="{{ url_for('index') }}">Animals</a>
@@ -21,17 +22,17 @@
             <a class="nav-link active" aria-current="page" href="{{ url_for('cats') }}">Cats</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Dogs</a>
+            <a class="nav-link" href="{{ url_for('dogs') }}">Dogs</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Events
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Training Cats</a></li>
-              <li><a class="dropdown-item" href="#">Training Dogs</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('cat_training') }}">Training Cats</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('dog_training') }}">Training Dogs</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Why Dogs are Better than Cats</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('why') }}">Why Dogs are Better than Cats</a></li>
             </ul>
           </li>
         </ul>
@@ -44,7 +45,7 @@
   </nav>
 {% block content %}
 
-<h1>This is a Website about Dogs and Cats</h1>
+<h1 class="index-header">This is a Website about Dogs and Cats</h1>
 <h2>Key differences between <span><em>cats</em></span> and <span><em>dogs</em></span></h2>
 
 <p>From care needs and cost to body language and behavior, there are plenty of differences between cats and dogs. While these characteristics can vary by the individual pet, here are the key takeaways:</p>
@@ -58,6 +59,15 @@
 <p>If you’re still trying to decide between a cat and a dog, ask yourself: Does having a pint-sized enigma wrapped in fur as your companion sound like fun to you? Then cat parent it is. If a life filled with wagging tails, wet noses, and adventures with a boundless-joy-filled beast sounds more appealing, “team dog” might be more your style. Whether you’re a cat person, dog person, or both, one thing’s for sure — there will be no shortage of love and laughter in your life.</p>
 
 <p>At the end of the day, as much as we might want to put our companions into boxes based on characteristics like behavior, care, and personality, it’s not black and white — each one comes with their own unique set of qualities, and that’s what makes them so special.</p>
+
+
+<div class="container">
+<img src="{{ url_for('static', filename='images/catsanddogs.jpeg') }}" alt="">
+<img src="{{ url_for('static', filename='images/catanddog.jpeg') }}" alt="">
+<img src="{{ url_for('static', filename='images/lookingovercouch.jpeg') }}" alt="">
+<img src="{{ url_for('static', filename='images/puppykitty.jpeg') }}" alt="">
+</div>
+
 
 
 {% endblock %}

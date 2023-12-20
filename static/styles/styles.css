@@ -1,2 +1,55 @@
 /* nothing yet */
 
+
+.homepage{
+  background-color: rgb(232, 229, 224);
+}
+
+p {
+  font-size: 24pt;
+  font-family: 'Times New Roman', Times, serif
+}
+
+ul, li {
+  font-size: 24pt;
+  font-family: 'Times New Roman', Times, serif;
+  text-indent: 25px;
+}
+
+.navbar {
+  background-color: rgb(79, 78, 78) !important;
+  color: burlywood;
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: 0 50px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+}
+
+.index-header{
+ padding-top: 30px;
+ text-align: center;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  border: 20px;
+}
+
+.green {
+  background-color: rgb(149, 215, 84);
+}
+
+.blue {
+  background-color: rgb(28, 164, 243);
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: aqua;
+  gap: 20px;
+  height: 100%;
+  width: 500%;
+  align-content: flex-start;
+}
+
